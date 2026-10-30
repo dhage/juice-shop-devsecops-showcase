@@ -1,5 +1,6 @@
 # DevSecOps Showcase with OWASP Juice Shop
 
+![Dependency Check](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/dependency-check.yml/badge.svg)
 ![SAST Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/sast.yml/badge.svg)
 ![Container Security Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/trivy.yml/badge.svg)
 
@@ -35,6 +36,12 @@ Application:
 - Grafana
 
 ## Security Controls
+
+### Software Composition Analysis (SCA)
+
+- OWASP Dependency Check
+
+Third-party dependencies are automatically analyzed for known security vulnerabilities.
 
 ### SAST
 - Semgrep
