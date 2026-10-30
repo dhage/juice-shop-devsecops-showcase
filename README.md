@@ -12,9 +12,11 @@ The goal is to integrate security controls across the entire software delivery l
 
 ```bash
 docker compose up -d
+```
 
 Application:
-http://localhost:3000
+
+[http://localhost:3000](http://localhost:3000)
 
 ## Technologies
 
