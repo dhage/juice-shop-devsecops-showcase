@@ -110,9 +110,9 @@ kubectl apply -f kubernetes/
 ```text
 .
 ├── .github/workflows
-│   ├── sast.yml
-│   ├── trivy.yml
-│   └── dependency-check.yml
+│   ├── sast.yaml
+│   ├── trivy.yaml
+│   └── dependency-check.yaml
 │
 ├── kubernetes
 │   ├── deployment.yaml
