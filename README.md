@@ -4,6 +4,7 @@
 ![SAST Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/sast.yaml/badge.svg)
 ![Container Security Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/trivy.yaml/badge.svg)
 ![Security Gate](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/security-gate.yaml/badge.svg)
+![Kubernetes Security Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/checkov.yaml/badge.svg)
 
 ## Overview
 
@@ -25,7 +26,8 @@ GitHub Actions
 Security Scans
  ├─ Semgrep (SAST)
  ├─ OWASP Dependency Check (SCA)
- └─ Trivy (Container Security)
+ ├─ Trivy (Container Security)
+ └─ Checkov (Kubernetes Security)
     ↓
 Security Gate
     ↓
@@ -88,6 +90,13 @@ http://localhost:3000
 - Trivy
 - Container image vulnerability scanning
 - Automated security checks during CI/CD execution
+
+### Kubernetes Security
+
+- Checkov
+- Kubernetes manifest analysis
+- Infrastructure security validation
+- Security misconfiguration detection
 
 ---
 
@@ -154,7 +163,8 @@ terraform plan
 │   ├── sast.yaml
 │   ├── trivy.yaml
 │   ├── dependency-check.yaml
-│   └── security-gate.yaml
+│   ├── security-gate.yaml
+│   └── checkov.yaml
 │
 ├── kubernetes
 │   ├── deployment.yaml
@@ -186,7 +196,7 @@ terraform plan
 - [x] Security Gate Implementation
 - [x] Kubernetes Manifests
 - [x] Terraform Infrastructure
-- [ ] Kubernetes Security Scanning
+- [x] Kubernetes Security Scanning
 - [ ] Prometheus Monitoring
 - [ ] Grafana Dashboards
 
