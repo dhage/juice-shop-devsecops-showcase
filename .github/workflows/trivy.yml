@@ -10,15 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run Trivy Vulnerability Scanner
-        uses: aquasecurity/trivy-action@v0.28.0
+      - name: Run Trivy Scan
+        uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'bkimminich/juice-shop:latest'
-          format: 'table'
-          exit-code: '0'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
+          image-ref: bkimminich/juice-shop:latest
+          format: table
+          exit-code: 0
+          severity: CRITICAL,HIGH
