@@ -1,6 +1,6 @@
 # DevSecOps Showcase with OWASP Juice Shop
 
-![SAST Scan](https://github.com/<USERNAME>/juice-shop-devsecops-showcase/actions/workflows/sast.yml/badge.svg)
+![SAST Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/sast.yml/badge.svg)
 
 ## Overview
 
