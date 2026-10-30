@@ -6,5 +6,5 @@ This directory contains security reports generated throughout the DevSecOps pipe
 
 - Semgrep SAST
 - Trivy Container Scan
-- Dependency Scanning
-- Kubernetes Security Assessment
+- Dependency Scanning (planned)
+- Kubernetes Security Assessment (planned)

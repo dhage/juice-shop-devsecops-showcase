@@ -42,7 +42,10 @@ Application:
 - OWASP Dependency Check
 
 ### Container Security
+
 - Trivy
+
+Container images are automatically scanned for known vulnerabilities (CVEs) during every push.
 
 ### CI/CD
 - GitHub Actions
