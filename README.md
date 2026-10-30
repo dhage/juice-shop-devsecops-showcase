@@ -7,9 +7,9 @@
 
 ## Overview
 
-This project demonstrates a practical DevSecOps implementation using OWASP Juice Shop.
+This project demonstrates a practical end-to-end DevSecOps implementation using OWASP Juice Shop.
 
-The objective is to integrate security controls throughout the software delivery lifecycle by combining CI/CD automation, security scanning, container security, and Kubernetes deployment.
+The objective is to integrate automated security controls throughout the software delivery lifecycle by combining CI/CD automation, security scanning, container security, Infrastructure as Code, and Kubernetes deployment.
 
 ---
 
@@ -44,10 +44,11 @@ Kubernetes Deployment
 | Containerization | Docker |
 | CI/CD | GitHub Actions |
 | SAST | Semgrep |
+| Software Composition Analysis | OWASP Dependency Check |
 | Container Security | Trivy |
-| Dependency Scanning | OWASP Dependency Check |
 | Container Orchestration | Kubernetes |
 | Infrastructure as Code | Terraform |
+| Security Governance | Security Gate |
 | Monitoring | Prometheus, Grafana |
 
 ---
@@ -124,6 +125,27 @@ kubectl apply -f kubernetes/
 
 ---
 
+## Terraform Infrastructure
+
+Infrastructure as Code resources are located in the `terraform` directory.
+
+### Components
+
+- Provider Configuration
+- Variables
+- Security Group Definition
+- Outputs
+
+Example:
+
+```bash
+terraform init
+terraform validate
+terraform plan
+```
+
+---
+
 ## Repository Structure
 
 ```text
@@ -131,16 +153,24 @@ kubectl apply -f kubernetes/
 ├── .github/workflows
 │   ├── sast.yaml
 │   ├── trivy.yaml
-│   └── dependency-check.yaml
+│   ├── dependency-check.yaml
+│   └── security-gate.yaml
 │
 ├── kubernetes
 │   ├── deployment.yaml
 │   ├── service.yaml
-│   └── ingress.yaml
+│   ├── ingress.yaml
+│   └── README.md
 │
-├── security
-├── reports
 ├── terraform
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   └── README.md
+│
+├── reports
+├── security
 └── README.md
 ```
 
@@ -153,6 +183,7 @@ kubectl apply -f kubernetes/
 - [x] Semgrep SAST
 - [x] Trivy Container Scanning
 - [x] OWASP Dependency Check
+- [x] Security Gate Implementation
 - [x] Kubernetes Manifests
 - [x] Terraform Infrastructure
 - [ ] Kubernetes Security Scanning
@@ -168,7 +199,10 @@ This project demonstrates practical experience with:
 - DevSecOps
 - Shift-Left Security
 - CI/CD Security Automation
-- Container Security
+- Security Governance
 - Vulnerability Management
+- Software Composition Analysis (SCA)
+- Container Security
 - Kubernetes Deployments
 - Infrastructure as Code
+- GitHub Actions Workflows
