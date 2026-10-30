@@ -6,79 +6,150 @@
 
 ## Overview
 
-This project demonstrates the implementation of a modern DevSecOps pipeline using OWASP Juice Shop.
+This project demonstrates a practical DevSecOps implementation using OWASP Juice Shop.
 
-The goal is to integrate security controls across the entire software delivery lifecycle.
+The objective is to integrate security controls throughout the software delivery lifecycle by combining CI/CD automation, security scanning, container security, and Kubernetes deployment.
+
+---
+
+## Architecture
+
+```text
+Developer
+    ↓
+GitHub Repository
+    ↓
+GitHub Actions
+    ↓
+Security Scans
+ ├─ Semgrep (SAST)
+ ├─ Trivy (Container Security)
+ └─ OWASP Dependency Check (SCA)
+    ↓
+Docker Image
+    ↓
+Kubernetes Deployment
+```
+
+---
+
+## Technologies
+
+| Area | Technology |
+|--------|------------|
+| Application | OWASP Juice Shop |
+| Containerization | Docker |
+| CI/CD | GitHub Actions |
+| SAST | Semgrep |
+| Container Security | Trivy |
+| Dependency Scanning | OWASP Dependency Check |
+| Container Orchestration | Kubernetes |
+| Infrastructure as Code | Terraform |
+| Monitoring | Prometheus, Grafana |
+
+---
 
 ## Local Setup
 
-### Start with Docker
+### Start Application
 
 ```bash
 docker compose up -d
 ```
 
-Application:
+Application URL:
 
-[http://localhost:3000](http://localhost:3000)
+```text
+http://localhost:3000
+```
 
-## Technologies
-
-- OWASP Juice Shop
-- Docker
-- GitHub Actions
-- Semgrep
-- Trivy
-- OWASP Dependency Check
-- Kubernetes
-- Terraform
-- Prometheus
-- Grafana
+---
 
 ## Security Controls
+
+### Static Application Security Testing (SAST)
+
+- Semgrep
+- Automated execution on every push and pull request
+- Early detection of security vulnerabilities
 
 ### Software Composition Analysis (SCA)
 
 - OWASP Dependency Check
-
-Third-party dependencies are automatically analyzed for known security vulnerabilities.
-
-### SAST
-- Semgrep
-
-### Dependency Scanning
-- OWASP Dependency Check
+- Detection of vulnerable third-party dependencies
+- CVE identification and reporting
 
 ### Container Security
 
 - Trivy
+- Container image vulnerability scanning
+- Automated security checks during CI/CD execution
 
-Container images are automatically scanned for known vulnerabilities (CVEs) during every push.
+---
 
-### CI/CD
-- GitHub Actions
+## Kubernetes Deployment
 
-### Infrastructure as Code
-- Terraform
+The Kubernetes manifests are located in the `kubernetes` directory.
 
-### Container Orchestration
-- Kubernetes
+### Components
 
-## Security Scanning
+- Deployment
+- Service
+- Ingress
 
-### SAST
+Example:
 
-This project uses Semgrep to perform static application security testing (SAST) during every pull request and push event.
+```bash
+kubectl apply -f kubernetes/
+```
 
-Security findings are automatically detected in the CI/CD pipeline.
+---
 
-## Pipeline Vision
+## Repository Structure
 
-Developer
-→ GitHub
-→ GitHub Actions
-→ Security Scans
-→ Docker Build
-→ Container Scan
-→ Kubernetes Deployment
+```text
+.
+├── .github/workflows
+│   ├── sast.yml
+│   ├── trivy.yml
+│   └── dependency-check.yml
+│
+├── kubernetes
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── ingress.yaml
+│
+├── security
+├── reports
+├── terraform
+└── README.md
+```
 
+---
+
+## Roadmap
+
+- [x] Dockerized OWASP Juice Shop
+- [x] GitHub Actions CI/CD
+- [x] Semgrep SAST
+- [x] Trivy Container Scanning
+- [x] OWASP Dependency Check
+- [x] Kubernetes Manifests
+- [ ] Terraform Infrastructure
+- [ ] Kubernetes Security Scanning
+- [ ] Prometheus Monitoring
+- [ ] Grafana Dashboards
+
+---
+
+## Learning Objectives
+
+This project demonstrates practical experience with:
+
+- DevSecOps
+- Shift-Left Security
+- CI/CD Security Automation
+- Container Security
+- Vulnerability Management
+- Kubernetes Deployments
+- Infrastructure as Code
