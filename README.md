@@ -34,6 +34,10 @@ Security Gate
 Docker Image
     ↓
 Kubernetes Deployment
+    ↓
+Monitoring
+ ├─ Prometheus
+ └─ Grafana
 ```
 
 ---
@@ -172,6 +176,11 @@ terraform plan
 │   ├── ingress.yaml
 │   └── README.md
 │
+├── monitoring
+│   ├── prometheus.yaml
+│   └── grafana
+│       └── README.md
+│
 ├── terraform
 │   ├── provider.tf
 │   ├── variables.tf
@@ -181,6 +190,9 @@ terraform plan
 │
 ├── reports
 ├── security
+│   ├── threat-model.md
+│   ├── risk-assessment.md
+│   └── security-controls.md
 └── README.md
 ```
 
@@ -197,8 +209,21 @@ terraform plan
 - [x] Kubernetes Manifests
 - [x] Terraform Infrastructure
 - [x] Kubernetes Security Scanning
-- [ ] Prometheus Monitoring
-- [ ] Grafana Dashboards
+- [x] Prometheus Monitoring
+- [x] Grafana Dashboards
+- [x] Security Documentation
+
+---
+
+## Security Documentation
+
+Security documentation is maintained within the `security` directory.
+
+### Available Documents
+
+- Threat Model
+- Risk Assessment
+- Security Controls Catalog
 
 ---
 
