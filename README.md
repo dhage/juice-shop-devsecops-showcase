@@ -6,6 +6,16 @@ This project demonstrates the implementation of a modern DevSecOps pipeline usin
 
 The goal is to integrate security controls across the entire software delivery lifecycle.
 
+## Local Setup
+
+### Start with Docker
+
+```bash
+docker compose up -d
+
+Application:
+http://localhost:3000
+
 ## Technologies
 
 - OWASP Juice Shop
