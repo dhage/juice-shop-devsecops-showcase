@@ -135,7 +135,7 @@ kubectl apply -f kubernetes/
 - [x] Trivy Container Scanning
 - [x] OWASP Dependency Check
 - [x] Kubernetes Manifests
-- [ ] Terraform Infrastructure
+- [x] Terraform Infrastructure
 - [ ] Kubernetes Security Scanning
 - [ ] Prometheus Monitoring
 - [ ] Grafana Dashboards
