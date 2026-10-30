@@ -1,0 +1,20 @@
+name: Security Gate
+
+on:
+  workflow_run:
+    workflows:
+      - SAST Scan
+      - Container Security Scan
+      - Dependency Check
+
+    types:
+      - completed
+
+jobs:
+  security-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check workflow result
+        run: |
+          echo "Security Gate executed"

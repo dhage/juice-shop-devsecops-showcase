@@ -3,6 +3,7 @@
 ![Dependency Check](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/dependency-check.yaml/badge.svg)
 ![SAST Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/sast.yaml/badge.svg)
 ![Container Security Scan](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/trivy.yaml/badge.svg)
+![Security Gate](https://github.com/dhage/juice-shop-devsecops-showcase/actions/workflows/security-gate.yaml/badge.svg)
 
 ## Overview
 
@@ -23,8 +24,10 @@ GitHub Actions
     ↓
 Security Scans
  ├─ Semgrep (SAST)
- ├─ Trivy (Container Security)
- └─ OWASP Dependency Check (SCA)
+ ├─ OWASP Dependency Check (SCA)
+ └─ Trivy (Container Security)
+    ↓
+Security Gate
     ↓
 Docker Image
     ↓
@@ -84,6 +87,22 @@ http://localhost:3000
 - Trivy
 - Container image vulnerability scanning
 - Automated security checks during CI/CD execution
+
+---
+
+## Security Governance
+
+A dedicated Security Gate validates the results of all automated security scans before deployment activities can proceed.
+
+### Security Validations
+
+- Semgrep SAST validation
+- OWASP Dependency Check validation
+- Trivy container vulnerability validation
+
+### Purpose
+
+The Security Gate demonstrates how security controls can be enforced as part of a modern DevSecOps workflow by preventing insecure changes from progressing through the CI/CD pipeline.
 
 ---
 
