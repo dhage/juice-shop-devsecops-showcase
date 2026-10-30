@@ -51,6 +51,14 @@ Application:
 ### Container Orchestration
 - Kubernetes
 
+## Security Scanning
+
+### SAST
+
+This project uses Semgrep to perform static application security testing (SAST) during every pull request and push event.
+
+Security findings are automatically detected in the CI/CD pipeline.
+
 ## Pipeline Vision
 
 Developer
