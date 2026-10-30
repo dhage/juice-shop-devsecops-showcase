@@ -1,5 +1,7 @@
 # DevSecOps Showcase with OWASP Juice Shop
 
+![SAST Scan](https://github.com/<USERNAME>/juice-shop-devsecops-showcase/actions/workflows/sast.yml/badge.svg)
+
 ## Overview
 
 This project demonstrates the implementation of a modern DevSecOps pipeline using OWASP Juice Shop.
