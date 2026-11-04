@@ -238,9 +238,9 @@ Current ADRs:
 │
 ├── monitoring
 │   ├── prometheus.yaml
-│   └── grafana
-│       └── README.md
-│
+│   ├── grafana
+│   │   └── README.md
+│   └── README.md
 ├── terraform
 │   ├── provider.tf
 │   ├── variables.tf
