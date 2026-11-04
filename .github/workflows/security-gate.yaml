@@ -16,12 +16,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check workflow result
+      - name: Security Assessment
         run: |
           echo "Security Gate executed"
           echo ""
-          echo "HIGH Findings detected"
-          echo "CRITICAL Findings detected"
+          echo "Security reports available:"
+          echo "- reports/trivy-findings.md"
+          echo "- reports/dependency-check-report.md"
           echo ""
-          echo "Status:"
-          echo "Expected because OWASP Juice Shop is intentionally vulnerable"
+          echo "OWASP Juice Shop is intentionally vulnerable."
+          echo "Detected findings demonstrate the effectiveness of automated security scanning."
