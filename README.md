@@ -185,22 +185,17 @@ Current ADRs:
 │   ├── security-gate.yaml
 │   └── checkov.yaml
 │
+├── architecture
+│   ├── architecture-diagram.drawio
+│   └── architecture-diagram.png
+│
 ├── docs
+│   ├── recruiter-summary.md
+│   ├── resume-entry.md
+│   ├── interview-pitch.md
 │   ├── secure-sdlc.md
 │   ├── screenshots
-│   │   ├── juice-shop-homepage.png
-│   │   ├── github-actions-overview.png
-│   │   ├── semgrep-workflow.png
-│   │   ├── trivy-workflow.png
-│   │   ├── dependency-check-workflow.png
-│   │   ├── checkov-workflow.png
-│   │   ├── security-gate-workflow.png
-│   │   └── README.md
 │   └── architecture-decisions
-│       ├── ADR-001-semgrep.md
-│       ├── ADR-002-trivy.md
-│       ├── ADR-003-checkov.md
-│       └── ADR-004-security-gate.md
 │
 ├── kubernetes
 │   ├── deployment.yaml
@@ -213,6 +208,7 @@ Current ADRs:
 │   ├── grafana
 │   │   └── README.md
 │   └── README.md
+│
 ├── terraform
 │   ├── provider.tf
 │   ├── variables.tf
