@@ -215,6 +215,14 @@ Current ADRs:
 │
 ├── docs
 │   ├── secure-sdlc.md
+│   ├── screenshots
+│   │   ├── juice-shop-homepage.png
+│   │   ├── github-actions-overview.png
+│   │   ├── semgrep-workflow.png
+│   │   ├── trivy-workflow.png
+│   │   ├── dependency-check-workflow.png
+│   │   ├── checkov-workflow.png
+│   │   └── security-gate-workflow.png
 │   └── architecture-decisions
 │       ├── ADR-001-semgrep.md
 │       ├── ADR-002-trivy.md
