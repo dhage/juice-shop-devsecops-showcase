@@ -109,8 +109,6 @@ Application URL:
 
 ### Kubernetes Security
 
-### Kubernetes Security
-
 - Checkov
   - Kubernetes manifest analysis
   - Infrastructure security validation
