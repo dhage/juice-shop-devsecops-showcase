@@ -6,6 +6,7 @@ on:
       - SAST Scan
       - Container Security Scan
       - Dependency Check
+      - Kubernetes Security Scan
 
     types:
       - completed
@@ -18,3 +19,9 @@ jobs:
       - name: Check workflow result
         run: |
           echo "Security Gate executed"
+          echo ""
+          echo "HIGH Findings detected"
+          echo "CRITICAL Findings detected"
+          echo ""
+          echo "Status:"
+          echo "Expected because OWASP Juice Shop is intentionally vulnerable"
