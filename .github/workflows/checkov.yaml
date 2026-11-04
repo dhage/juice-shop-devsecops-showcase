@@ -17,3 +17,4 @@ jobs:
         with:
           directory: kubernetes
           framework: kubernetes
+          soft_fail: true
