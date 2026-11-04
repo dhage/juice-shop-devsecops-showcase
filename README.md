@@ -109,10 +109,13 @@ Application URL:
 
 ### Kubernetes Security
 
+### Kubernetes Security
+
 - Checkov
-- Kubernetes manifest analysis
-- Infrastructure security validation
-- Security misconfiguration detection
+  - Kubernetes manifest analysis
+  - Infrastructure security validation
+  - Security misconfiguration detection
+  - Findings documented in [Checkov Findings Report](reports/checkov-findings.md)
 
 ---
 
