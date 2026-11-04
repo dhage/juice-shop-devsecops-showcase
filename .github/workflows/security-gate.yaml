@@ -20,9 +20,6 @@ jobs:
         run: |
           echo "Security Gate executed"
           echo ""
-          echo "Security reports available:"
-          echo "- reports/trivy-findings.md"
-          echo "- reports/dependency-check-report.md"
-          echo ""
+          echo "Review findings documentation in the reports directory."
           echo "OWASP Juice Shop is intentionally vulnerable."
-          echo "Detected findings demonstrate the effectiveness of automated security scanning."
+          echo "Security findings are expected and documented."
