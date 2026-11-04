@@ -281,6 +281,13 @@ Security documentation is maintained within the `security` directory.
 - Secure SDLC
 - Architecture Decision Records (ADR)
 
+### Documentation
+
+- [Threat Model](security/threat-model.md)
+- [Risk Assessment](security/risk-assessment.md)
+- [Security Controls](security/security-controls.md)
+- [Secure SDLC](docs/secure-sdlc.md)
+
 ---
 
 ## What This Project Demonstrates
