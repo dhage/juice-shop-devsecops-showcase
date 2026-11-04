@@ -222,7 +222,8 @@ Current ADRs:
 │   │   ├── trivy-workflow.png
 │   │   ├── dependency-check-workflow.png
 │   │   ├── checkov-workflow.png
-│   │   └── security-gate-workflow.png
+│   │   ├── security-gate-workflow.png
+│   │   └── README.md
 │   └── architecture-decisions
 │       ├── ADR-001-semgrep.md
 │       ├── ADR-002-trivy.md
