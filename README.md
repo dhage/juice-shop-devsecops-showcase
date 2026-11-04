@@ -14,6 +14,12 @@ The objective is to integrate automated security controls throughout the softwar
 
 ---
 
+## Project Status
+
+This project is actively developed as a hands-on DevSecOps showcase demonstrating secure software delivery practices, automated security testing and infrastructure security validation.
+
+---
+
 ## Architecture
 
 ```text
@@ -38,10 +44,15 @@ Kubernetes Deployment
 Monitoring
  ├─ Prometheus
  └─ Grafana
+    ↓
+Governance & Documentation
+ ├─ Threat Model
+ ├─ Risk Assessment
+ ├─ Security Controls
+ └─ ADRs
 ```
 
 ---
-
 ## Technologies
 
 | Area | Technology |
@@ -52,6 +63,7 @@ Monitoring
 | SAST | Semgrep |
 | Software Composition Analysis | OWASP Dependency Check |
 | Container Security | Trivy |
+| Kubernetes Security | Checkov |
 | Container Orchestration | Kubernetes |
 | Infrastructure as Code | Terraform |
 | Security Governance | Security Gate |
@@ -70,7 +82,7 @@ docker compose up -d
 Application URL:
 
 ```text
-http://localhost:3000
+[http://localhost:3000](http://localhost:3000)
 ```
 
 ---
@@ -113,6 +125,7 @@ A dedicated Security Gate validates the results of all automated security scans 
 - Semgrep SAST validation
 - OWASP Dependency Check validation
 - Trivy container vulnerability validation
+- Checkov Kubernetes security validation
 
 ### Purpose
 
@@ -159,6 +172,35 @@ terraform plan
 
 ---
 
+## Secure SDLC
+
+This project demonstrates how security can be integrated into every phase of the software development lifecycle through automated testing, infrastructure validation, governance controls and continuous security monitoring.
+
+### Implemented Practices
+
+- Shift-Left Security
+- Static Application Security Testing (SAST)
+- Software Composition Analysis (SCA)
+- Container Security Scanning
+- Kubernetes Security Validation
+- Security Governance
+- Threat Modeling
+- Risk Assessment
+- Architecture Decision Records (ADRs)
+
+### Architecture Decision Records
+
+The project documents important architectural and security decisions using ADRs.
+
+Current ADRs:
+
+- ADR-001: Static Application Security Testing with Semgrep
+- ADR-002: Container Security Scanning with Trivy
+- ADR-003: Kubernetes Security Validation with Checkov
+- ADR-004: Security Gate Implementation
+
+---
+
 ## Repository Structure
 
 ```text
@@ -169,6 +211,14 @@ terraform plan
 │   ├── dependency-check.yaml
 │   ├── security-gate.yaml
 │   └── checkov.yaml
+│
+├── docs
+│   ├── secure-sdlc.md
+│   └── architecture-decisions
+│       ├── ADR-001-semgrep.md
+│       ├── ADR-002-trivy.md
+│       ├── ADR-003-checkov.md
+│       └── ADR-004-security-gate.md
 │
 ├── kubernetes
 │   ├── deployment.yaml
@@ -189,10 +239,12 @@ terraform plan
 │   └── README.md
 │
 ├── reports
+│
 ├── security
 │   ├── threat-model.md
 │   ├── risk-assessment.md
 │   └── security-controls.md
+│
 └── README.md
 ```
 
@@ -209,9 +261,13 @@ terraform plan
 - [x] Kubernetes Manifests
 - [x] Terraform Infrastructure
 - [x] Kubernetes Security Scanning
-- [x] Prometheus Monitoring
-- [x] Grafana Dashboards
 - [x] Security Documentation
+- [x] Threat Modeling
+- [x] Risk Assessment
+- [x] Secure SDLC
+- [x] Architecture Decision Records (ADR)
+- [x] Prometheus Configuration
+- [x] Grafana Dashboard Planning
 
 ---
 
@@ -224,6 +280,23 @@ Security documentation is maintained within the `security` directory.
 - Threat Model
 - Risk Assessment
 - Security Controls Catalog
+- Secure SDLC
+- Architecture Decision Records (ADR)
+
+---
+
+## What This Project Demonstrates
+
+This repository demonstrates practical implementation of:
+
+- Secure CI/CD Pipelines
+- Shift-Left Security
+- Security Automation
+- Security Governance
+- Infrastructure as Code
+- Kubernetes Security
+- Threat Modeling
+- Security Documentation
 
 ---
 
@@ -241,3 +314,7 @@ This project demonstrates practical experience with:
 - Kubernetes Deployments
 - Infrastructure as Code
 - GitHub Actions Workflows
+- Threat Modeling
+- Risk Assessment
+- Secure Software Development Lifecycle (SSDLC)
+- Architecture Decision Records (ADR)
