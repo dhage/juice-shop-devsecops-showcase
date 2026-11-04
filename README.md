@@ -102,8 +102,10 @@ Application URL:
 ### Container Security
 
 - Trivy
-- Container image vulnerability scanning
-- Automated security checks during CI/CD execution
+  - Container image vulnerability scanning
+  - Detection of HIGH and CRITICAL vulnerabilities
+  - Automated security checks during CI/CD execution
+  - Findings documented in [Trivy Findings Report](reports/trivy-findings.md)
 
 ### Kubernetes Security
 
