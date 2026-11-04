@@ -81,9 +81,7 @@ docker compose up -d
 
 Application URL:
 
-```text
 [http://localhost:3000](http://localhost:3000)
-```
 
 ---
 
