@@ -22,35 +22,7 @@ This project is actively developed as a hands-on DevSecOps showcase demonstratin
 
 ## Architecture
 
-```text
-Developer
-    ↓
-GitHub Repository
-    ↓
-GitHub Actions
-    ↓
-Security Scans
- ├─ Semgrep (SAST)
- ├─ OWASP Dependency Check (SCA)
- ├─ Trivy (Container Security)
- └─ Checkov (Kubernetes Security)
-    ↓
-Security Gate
-    ↓
-Docker Image
-    ↓
-Kubernetes Deployment
-    ↓
-Monitoring
- ├─ Prometheus
- └─ Grafana
-    ↓
-Governance & Documentation
- ├─ Threat Model
- ├─ Risk Assessment
- ├─ Security Controls
- └─ ADRs
-```
+![Architecture Diagram](architecture/architecture-diagram.png)
 
 ---
 ## Technologies
@@ -249,6 +221,9 @@ Current ADRs:
 │   └── README.md
 │
 ├── reports
+│   ├── checkov-findings.md
+│   ├── trivy-findings.md
+│   └── README.md
 │
 ├── security
 │   ├── threat-model.md
